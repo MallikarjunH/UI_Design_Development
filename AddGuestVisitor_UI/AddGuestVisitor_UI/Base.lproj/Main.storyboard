@@ -102,6 +102,9 @@
                                                         <state key="normal" title="+ Add More">
                                                             <color key="titleColor" red="0.0" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTapOnAddMoreVisitorsButton:" destination="RPp-5z-etk" eventType="touchUpInside" id="c3t-pe-Fng"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -397,8 +400,12 @@
                     <navigationItem key="navigationItem" title="Guest" id="Ln9-Aw-Uwm"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="dailyView" destination="8FL-BN-EDi" id="auV-s2-aOb"/>
                         <outlet property="mainTableView" destination="44Q-n5-rwx" id="CMx-KI-zOR"/>
+                        <outlet property="occasionalyView" destination="htO-h5-Zht" id="Uh1-70-Z8g"/>
+                        <outlet property="saveImage" destination="hYE-L7-W4C" id="kD1-14-u3A"/>
                         <outlet property="tableViewHeightConstraint" destination="S1u-uT-KY4" id="aoY-pC-hp3"/>
+                        <outlet property="weeklyView" destination="OBf-5G-D0n" id="FPb-U5-F3b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNf-tA-10x" sceneMemberID="firstResponder"/>
