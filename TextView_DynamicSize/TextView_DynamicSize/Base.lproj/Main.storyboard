@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NGq-Pe-gOS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="so1-AH-FM8">
+            <objects>
+                <viewController id="NGq-Pe-gOS" customClass="ViewController" customModule="TextView_DynamicSize" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UzB-Zj-8jT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGc-Uw-7gs">
+                                <rect key="frame" x="20" y="90" width="72" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="tcp-CM-F2l"/>
+                                    <constraint firstAttribute="width" constant="72" id="v6f-dC-x5I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.050980392159999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzZ-FO-PeT">
+                                <rect key="frame" x="95" y="83" width="266" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lT7-4K-Xzb"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NGq-Pe-gOS" id="eKx-i3-Wp7"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVq-tf-Rjx">
+                                <rect key="frame" x="95" y="153" width="232" height="95.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Ne4-bV-4v5"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.050980392159999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NVq-tf-Rjx" firstAttribute="top" secondItem="FzZ-FO-PeT" secondAttribute="bottom" constant="20" id="931-i1-MAV"/>
+                            <constraint firstItem="AGc-Uw-7gs" firstAttribute="top" secondItem="jIw-WB-TFy" secondAttribute="top" constant="46" id="Cvu-9f-gV8"/>
+                            <constraint firstItem="NVq-tf-Rjx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jIw-WB-TFy" secondAttribute="leading" symbolic="YES" id="HL5-Db-gQ8"/>
+                            <constraint firstItem="FzZ-FO-PeT" firstAttribute="top" secondItem="jIw-WB-TFy" secondAttribute="top" constant="39" id="PUG-oh-20T"/>
+                            <constraint firstItem="AGc-Uw-7gs" firstAttribute="leading" secondItem="jIw-WB-TFy" secondAttribute="leading" constant="20" id="RcO-zI-buB"/>
+                            <constraint firstItem="jIw-WB-TFy" firstAttribute="trailing" secondItem="NVq-tf-Rjx" secondAttribute="trailing" constant="87" id="S0I-Ge-DEK"/>
+                            <constraint firstItem="FzZ-FO-PeT" firstAttribute="leading" secondItem="AGc-Uw-7gs" secondAttribute="trailing" constant="3" id="TtO-YV-vhl"/>
+                            <constraint firstItem="jIw-WB-TFy" firstAttribute="trailing" secondItem="FzZ-FO-PeT" secondAttribute="trailing" constant="53" id="fYF-Du-6Gq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jIw-WB-TFy"/>
+                    </view>
+                    <connections>
+                        <outlet property="textViewOutlet" destination="FzZ-FO-PeT" id="aEy-AN-ln4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-bq-RFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="104"/>
+        </scene>
+    </scenes>
+</document>
