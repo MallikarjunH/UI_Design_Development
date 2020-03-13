@@ -12,7 +12,7 @@ class SelectVisitorTypeVC: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     
-    let typeArray = ["Cab","Delivery","Home Services","Visitor or Guest"]
+    let typeArray = ["Cab","Delivery","Home Services"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
