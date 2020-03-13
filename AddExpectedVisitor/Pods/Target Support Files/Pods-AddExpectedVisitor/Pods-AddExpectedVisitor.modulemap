@@ -1,0 +1,6 @@
+framework module Pods_AddExpectedVisitor {
+  umbrella header "Pods-AddExpectedVisitor-umbrella.h"
+
+  export *
+  module * { export * }
+}
