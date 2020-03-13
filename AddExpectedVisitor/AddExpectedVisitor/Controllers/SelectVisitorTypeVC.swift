@@ -39,4 +39,11 @@ extension SelectVisitorTypeVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc =  self.storyboard?.instantiateViewController(withIdentifier: "AddVisitorFormVC") as? AddVisitorFormVC
+        vc?.selectedType = typeArray[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 }

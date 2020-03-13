@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class VisiorTypeTableViewCell: UITableViewCell {
 
@@ -102,7 +103,7 @@ class VisitorDetailsVehicleNumberCell: UITableViewCell,UITextFieldDelegate {
     func addBottomBorderColor(textField: UITextField){
         
         let layer = CALayer() //c6cad3
-        layer.backgroundColor =  UIColor.black as! CGColor //UIColor.getUIColor(0xc6cad3).cgColor
+        layer.backgroundColor = UIColor.blue.cgColor //UIColor.getUIColor(0xc6cad3).cgColor
         layer.frame = CGRect(x: 0, y: textField.frame.size.height - 2.0, width: textField.frame.size.width, height: 1.0)
         textField.layer.addSublayer(layer)
     }

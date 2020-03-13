@@ -14,6 +14,7 @@
 		6CE20A5D241B6BBC00A1820B /* SelectVisitorTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE20A5C241B6BBC00A1820B /* SelectVisitorTypeVC.swift */; };
 		6CE20A60241B6E0F00A1820B /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE20A5F241B6E0F00A1820B /* TableViewCells.swift */; };
 		6CE20A63241B790900A1820B /* AddVisitorFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE20A62241B790900A1820B /* AddVisitorFormVC.swift */; };
+		6CE20A65241B880300A1820B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE20A64241B880300A1820B /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6CE20A5C241B6BBC00A1820B /* SelectVisitorTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVisitorTypeVC.swift; sourceTree = "<group>"; };
 		6CE20A5F241B6E0F00A1820B /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 		6CE20A62241B790900A1820B /* AddVisitorFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVisitorFormVC.swift; sourceTree = "<group>"; };
+		6CE20A64241B880300A1820B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = AddExpectedVisitor/Controllers/Utility.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		6CC06ABB240E1E01003AD0D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6CE20A64241B880300A1820B /* Utility.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE20A65241B880300A1820B /* Utility.swift in Sources */,
 				6CC06AA8240E1DDA003AD0D0 /* AppDelegate.swift in Sources */,
 				6CE20A5D241B6BBC00A1820B /* SelectVisitorTypeVC.swift in Sources */,
 				6CE20A60241B6E0F00A1820B /* TableViewCells.swift in Sources */,

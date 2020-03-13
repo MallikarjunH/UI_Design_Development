@@ -204,6 +204,11 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="didTapedOnDoneButtonDateTextField:" destination="JTr-Sp-jwd" eventType="editingDidEnd" id="WjJ-R6-pVi"/>
+                                                        <action selector="didTapedOnSelectDate:" destination="JTr-Sp-jwd" eventType="editingDidBegin" id="SxN-Sb-rTP"/>
+                                                        <outlet property="delegate" destination="JTr-Sp-jwd" id="gIc-bK-MBY"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,6 +256,9 @@
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="JTr-Sp-jwd" id="NS4-8D-iCH"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBe-4m-22b">
                                                             <rect key="frame" x="261" y="0.0" width="73" height="60"/>
@@ -258,6 +266,9 @@
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="JTr-Sp-jwd" id="IwA-5x-h0R"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-Wt-vn6">
                                                             <rect key="frame" x="173" y="0.0" width="73" height="60"/>
@@ -265,6 +276,9 @@
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="JTr-Sp-jwd" id="FAm-aS-7GI"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vf5-Xo-lXd">
                                                             <rect key="frame" x="90" y="0.0" width="73" height="60"/>
@@ -272,6 +286,9 @@
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="JTr-Sp-jwd" id="1VE-dx-k37"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -340,6 +357,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="JTr-Sp-jwd" id="xoh-lt-fuI"/>
+                                                    </connections>
                                                 </textField>
                                                 <textField opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Block 1 22" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kAC-Ad-l7u">
                                                     <rect key="frame" x="36" y="115.5" width="310" height="25"/>
@@ -349,6 +369,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="JTr-Sp-jwd" id="UUf-od-xOc"/>
+                                                    </connections>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8A-go-gBE">
                                                     <rect key="frame" x="33" y="71" width="342" height="0.5"/>
@@ -418,6 +441,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JTr-Sp-jwd" id="9yb-zy-g90"/>
+                                    <outlet property="delegate" destination="JTr-Sp-jwd" id="pMy-Mv-awg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -429,6 +456,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MBx-US-qPG"/>
                     </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="FbO-FQ-HWx" id="KYo-D4-FvI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wO9-cs-3Bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="gmD-q2-Lcv">
