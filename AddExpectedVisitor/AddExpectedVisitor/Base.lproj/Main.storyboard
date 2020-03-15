@@ -460,7 +460,7 @@
                         <outlet property="addCompanyNameBackView" destination="lVv-JI-Rm0" id="glh-dJ-csf"/>
                         <outlet property="addCompanyNameFrontView" destination="ytq-rG-qX8" id="zOf-zl-JLR"/>
                         <outlet property="addCompanyNameTextField" destination="vCa-gC-Fx9" id="f9j-cs-njO"/>
-                        <outlet property="companyListTableView" destination="m1P-hV-4Yj" id="UDF-yK-4Cf"/>
+                        <outlet property="companyListTableView" destination="m1P-hV-4Yj" id="cJd-Zg-dNk"/>
                         <outlet property="companyListView" destination="gmD-q2-Lcv" id="N3M-NI-9Un"/>
                         <outlet property="mainTableView" destination="FbO-FQ-HWx" id="KYo-D4-FvI"/>
                     </connections>
@@ -527,8 +527,8 @@
                                                 </constraints>
                                             </tableViewCellContentView>
                                             <connections>
-                                                <outlet property="companyImage" destination="j1B-Rf-rlw" id="P1W-3E-yKv"/>
-                                                <outlet property="companyNameLabel" destination="Rws-VK-Ia3" id="x3x-By-LMh"/>
+                                                <outlet property="companyImage" destination="j1B-Rf-rlw" id="alo-4K-3MF"/>
+                                                <outlet property="companyNameLabel" destination="Rws-VK-Ia3" id="B6b-FX-RA7"/>
                                             </connections>
                                         </tableViewCell>
                                     </prototypes>
@@ -561,6 +561,9 @@
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnL-v8-dd2">
                                                     <rect key="frame" x="0.0" y="0.0" width="281" height="60"/>
+                                                    <connections>
+                                                        <action selector="addCompanyNameFrontViewButtonClicked:" destination="JTr-Sp-jwd" eventType="touchUpInside" id="8xf-fS-uVt"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -610,6 +613,9 @@
                                                         <constraint firstAttribute="width" constant="34" id="Usj-pB-P6I"/>
                                                         <constraint firstAttribute="height" constant="30" id="b0U-4H-cPh"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="addCompanyNameBackViewButtonClicked:" destination="JTr-Sp-jwd" eventType="touchUpInside" id="U9n-oi-NCk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -669,7 +675,7 @@
                             </constraints>
                             <state key="normal" backgroundImage="whiteCrossRound"/>
                             <connections>
-                                <action selector="didTapOnLogCrossBtn:" destination="JTr-Sp-jwd" eventType="touchUpInside" id="HKB-Hp-ebL"/>
+                                <action selector="didTapOnLogCrossBtn:" destination="JTr-Sp-jwd" eventType="touchUpInside" id="S6T-wU-n3Q"/>
                             </connections>
                         </button>
                     </subviews>
@@ -692,7 +698,7 @@
         <image name="down_arrow_black" width="20" height="20"/>
         <image name="down_arrow_orange" width="14" height="9"/>
         <image name="helpers_button_card" width="350" height="52"/>
-        <image name="plus_blue" width="16" height="16"/>
-        <image name="whiteCrossRound" width="16" height="16"/>
+        <image name="plus_blue" width="20" height="19"/>
+        <image name="whiteCrossRound" width="34" height="34"/>
     </resources>
 </document>

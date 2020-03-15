@@ -28,7 +28,9 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
     
     var bgView:UIView!
     
-   // var companyNameArray:[String] = ["Amazon", "FlipKart"]
+    var companyNameArray:[String] = ["Amazon", "FlipKart", "Uber Eats", "Snap Deal", "Myntra", "Zomato", "Swiggy"]
+    var companyImageArray:[String] = ["Amazon", "FlipKart", "Uber Eats", "Snap Deal", "Myntra", "Zomato", "Swiggy"]
+    
     var allFlats:[String] = ["A 091","A 0012", "B 921"]
     
     
@@ -56,6 +58,12 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
         otpArray[2] = "A"
         otpArray[3] = "A"
         
+        
+        companyListTableView.delegate = self
+        companyListTableView.dataSource = self
+        
+        addCompanyNameTextField.delegate = self
+        companyListTableView.isScrollEnabled = true
     }
 
      //MARK: Did Tapped on Select date button to open picker view //did begin
@@ -128,7 +136,7 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
     //MARK: Add/Submit  Button Selection
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
     
-        print("Clicked on Add Button")
+        print("Clicked on Add Button: Start API call")
     }
     
     func flatSelectedOfID(_ flatId:String) {
@@ -174,7 +182,7 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
     //MARK: Clicked on Cross Button to Dismiss Pop Up View
     @IBAction func didTapOnLogCrossBtn(_ sender: Any) {
         
-       // self.hideCompanyViewPopUp()
+        self.hideCompanyViewPopUp()
         
         DispatchQueue.main.async {
             
@@ -197,6 +205,40 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
             self.bgView.removeFromSuperview()
         })
     }
+    
+    //MARK: Add Company Name Click Action on PopUp View - Front View
+    @IBAction func addCompanyNameFrontViewButtonClicked(_ sender: Any) {
+        
+        DispatchQueue.main.async {
+            self.addCompanyNameBackView.isHidden = false
+            self.addCompanyNameFrontView.isHidden = true
+            self.addCompanyNameTextField.becomeFirstResponder()
+            //self.companyListTableView.reloadData()
+        }
+    }
+    
+    //MARK: Add Company Name Click Action on PopUp View - Back View
+    @IBAction func addCompanyNameBackViewButtonClicked(_ sender: Any) {
+        
+        if self.addCompanyNameTextField.text == ""{
+            
+            self.addCompanyNameTextField.resignFirstResponder()
+           // AaAlertviews.errorColorCustomBottomAlert(msg: "Please Enter The Company Name", selfView: self.view)
+        }
+        else{
+            DispatchQueue.main.async {
+                self.addCompanyNameTextField.resignFirstResponder()
+                self.hideCompanyViewPopUp()
+                self.addCompanyNameBackView.isHidden = true
+                self.selectedCompanyName = self.addCompanyNameTextField.text!
+                
+                //let indexPath = IndexPath(row: 3, section: 0)
+                let indexPath = IndexPath(row: self.selectedType == "Cab" ? 3:2, section: 0)
+                self.mainTableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
+    
     
     
     //MARK: TextField Delegate methods
@@ -381,20 +423,55 @@ extension AddVisitorFormVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return selectedType == "Cab" ? 4:3
+        if tableView == companyListTableView {
+            
+            return self.companyNameArray.count //cabArray.count
+        }else{
+            return selectedType == "Cab" ? 4:3
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch indexPath.row {
-        case 0:
-            return getCell(.top)
-        case 1:
-            return getCell(.date)
-        case 2:
-            return selectedType == "Cab" ? getCell(.otp):getCell(.bottom)
-        default:
-            return getCell(.bottom)
+        if tableView == companyListTableView {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyListTableViewCell", for: indexPath) as! CompanyListTableViewCell
+            cell.tintColor = UIColor.blue
+            cell.accessoryType = .none
+            
+            cell.companyNameLabel.text = self.companyNameArray[indexPath.row]
+            cell.companyImage.image = UIImage(named: self.companyImageArray[indexPath.row])
+            
+            return cell
+        }else{
+            
+            
+            switch indexPath.row {
+            case 0:
+                return getCell(.top)
+            case 1:
+                return getCell(.date)
+            case 2:
+                return selectedType == "Cab" ? getCell(.otp):getCell(.bottom)
+            default:
+                return getCell(.bottom)
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    
+        if tableView == companyListTableView {
+            
+            self.selectedCompanyName = self.companyNameArray[indexPath.row]
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if tableView == companyListTableView {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
         }
     }
     
