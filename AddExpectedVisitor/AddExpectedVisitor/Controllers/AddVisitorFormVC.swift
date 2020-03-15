@@ -31,6 +31,15 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
    // var companyNameArray:[String] = ["Amazon", "FlipKart"]
     var allFlats:[String] = ["A 091","A 0012", "B 921"]
     
+    
+    @IBOutlet var companyListView: UIView!
+    @IBOutlet weak var companyListTableView: UITableView!
+    
+    @IBOutlet weak var addCompanyNameFrontView: UIView!
+    @IBOutlet weak var addCompanyNameBackView: UIView!
+    @IBOutlet weak var addCompanyNameTextField: UITextField!
+    
+    
     enum CellType {
         case top
         case date
@@ -132,13 +141,70 @@ class AddVisitorFormVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //MARK: Add Company Name PopUp View - Code
+    func didTapedOnSelectCompany(){
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        self.bgView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        self.bgView.isUserInteractionEnabled = true
+        
+        self.bgView.backgroundColor = .clear
+        // let newWindow = UIApplication.shared.keyWindow!
+        self.view.addSubview(self.bgView)
+        
+        companyListView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        companyListView.backgroundColor = .clear
+        self.bgView.addSubview(self.companyListView)
+        let newFrame = CGRect(x: 0, y:0, width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height)
+        
+        DispatchQueue.main.async {
+            self.addCompanyNameFrontView.isHidden = false
+            self.addCompanyNameBackView.isHidden = true
+            self.companyListTableView.reloadData()
+        }
+        
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1,
+                       initialSpringVelocity: 0,options: UIView.AnimationOptions.curveEaseOut, animations: {
+                        self.bgView.backgroundColor = UIColor(red:56/255,green:63/255,blue:65/255,alpha:0.77)
+                        self.companyListView.frame = newFrame
+        }, completion: { finished in
+        })
+    }
+    
+    //MARK: Clicked on Cross Button to Dismiss Pop Up View
+    @IBAction func didTapOnLogCrossBtn(_ sender: Any) {
+        
+       // self.hideCompanyViewPopUp()
+        
+        DispatchQueue.main.async {
+            
+            //let indexPath = IndexPath(row: 3, section: 0)
+            let indexPath = IndexPath(row: self.selectedType == "Cab" ? 3:2, section: 0)
+            self.mainTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func hideCompanyViewPopUp(){
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        let newFrame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        UIView.animate(withDuration: 0.4, delay: 0.0,usingSpringWithDamping: 1,
+                       initialSpringVelocity: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                        self.bgView.backgroundColor = .clear
+                        self.companyListView.frame = newFrame
+        }, completion: { finished in
+            self.companyListView.removeFromSuperview()
+            self.bgView.removeFromSuperview()
+        })
+    }
+    
     
     //MARK: TextField Delegate methods
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
         if textField.tag == 15{
             print("Show Pop Up - To Select The Companies")
-            //self.didTapedOnSelectCompany()
+            self.didTapedOnSelectCompany()
             return false;
         }
         else  if textField.tag == 16{

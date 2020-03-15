@@ -457,6 +457,11 @@
                         <viewLayoutGuide key="safeArea" id="MBx-US-qPG"/>
                     </view>
                     <connections>
+                        <outlet property="addCompanyNameBackView" destination="lVv-JI-Rm0" id="glh-dJ-csf"/>
+                        <outlet property="addCompanyNameFrontView" destination="ytq-rG-qX8" id="zOf-zl-JLR"/>
+                        <outlet property="addCompanyNameTextField" destination="vCa-gC-Fx9" id="f9j-cs-njO"/>
+                        <outlet property="companyListTableView" destination="m1P-hV-4Yj" id="UDF-yK-4Cf"/>
+                        <outlet property="companyListView" destination="gmD-q2-Lcv" id="N3M-NI-9Un"/>
                         <outlet property="mainTableView" destination="FbO-FQ-HWx" id="KYo-D4-FvI"/>
                     </connections>
                 </viewController>
@@ -492,7 +497,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <prototypes>
-                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompanyListTableViewCell" rowHeight="60" id="lw4-0J-21r" customClass="CompanyListTableViewCell" customModule="ApartmentAdda" customModuleProvider="target">
+                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompanyListTableViewCell" rowHeight="60" id="lw4-0J-21r" customClass="CompanyListTableViewCell" customModule="AddExpectedVisitor" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="28" width="289" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lw4-0J-21r" id="mNg-X2-L8R">
@@ -663,6 +668,9 @@
                                 <constraint firstAttribute="height" constant="34" id="NTy-rn-IMI"/>
                             </constraints>
                             <state key="normal" backgroundImage="whiteCrossRound"/>
+                            <connections>
+                                <action selector="didTapOnLogCrossBtn:" destination="JTr-Sp-jwd" eventType="touchUpInside" id="HKB-Hp-ebL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
