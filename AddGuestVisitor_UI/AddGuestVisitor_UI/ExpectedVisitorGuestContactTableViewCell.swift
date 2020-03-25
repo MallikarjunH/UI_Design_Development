@@ -21,8 +21,7 @@ class ExpectedVisitorGuestContactTableViewCell: UITableViewCell {
         BGView.layer.cornerRadius = 8
         BGView.layer.borderWidth = 1
         BGView.layer.borderColor = yourColor.cgColor
-        
-        
+    
         
     }
 
