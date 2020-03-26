@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import EPContactsPicker
 
 class InitialViewController: UIViewController {
-
+    
     @IBOutlet weak var mainTableView: UITableView!
-   
+    
     enum CellType {
         case top
         case phone
@@ -23,7 +24,7 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         mainTableView.tableHeaderView = UIView()
@@ -33,7 +34,7 @@ class InitialViewController: UIViewController {
 } //AddExpectedVisitorTypeCell2
 
 extension InitialViewController: UITableViewDataSource, UITableViewDelegate {
-   
+    
     
     func getCell(_ type:CellType) -> UITableViewCell {
         
@@ -87,17 +88,54 @@ extension InitialViewController: UITableViewDataSource, UITableViewDelegate {
         }
         else if indexPath.row == 1{ // Add from contacts
             
-          /*  let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.phoneNumber)
+            let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.phoneNumber)
             let navigationController = UINavigationController(rootViewController: contactPickerScene)
-            self.present(navigationController, animated: true, completion: nil) */
+            self.present(navigationController, animated: true, completion: nil)
             
         }
         else{ //Index 2 - Add manually
-          /*  let vc = CommonFunctions.shareInstance.getController(id: "AddExpectedGuestManuallyViewController", .GateKeeper) as! AddExpectedGuestManuallyViewController
-            vc.title = "Add Expected Visitor"
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-            self.navigationController?.pushViewController(vc, animated: true) */
+            /*  let vc = CommonFunctions.shareInstance.getController(id: "AddExpectedGuestManuallyViewController", .GateKeeper) as! AddExpectedGuestManuallyViewController
+             vc.title = "Add Expected Visitor"
+             self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+             self.navigationController?.pushViewController(vc, animated: true) */
         }
     }
     
+}
+
+extension InitialViewController: EPPickerDelegate {
+    
+    func epContactPicker(_ : EPContactsPicker, didSelectMultipleContacts contacts: [EPContact]) {
+        var expectedContacts = [VisitorsContactModel]()
+        for contact in contacts {
+            let expectedContact = VisitorsContactModel()
+            if contact.phoneNumbers.count > 0  {
+                
+                expectedContact.phoneNumber = contact.phoneNumbers[0].phoneNumber
+                
+            }else{
+                continue
+            }
+            if contact.thumbnailProfileImage != nil {
+                expectedContact.image   =   contact.thumbnailProfileImage!.pngData()
+                
+            }
+            if contact.displayName() != "" {
+                
+                expectedContact.name = contact.displayName()
+            }
+            
+            expectedContacts.append(expectedContact)
+            
+        }
+        
+        for contact in expectedContacts {
+            if visitors.filter({$0.phoneNumber == contact.phoneNumber}).count == 0 {
+                visitors.append(contact)
+            }
+        }
+        
+        print("Selected Contacts are: \(visitors)")
+        
+    }
 }

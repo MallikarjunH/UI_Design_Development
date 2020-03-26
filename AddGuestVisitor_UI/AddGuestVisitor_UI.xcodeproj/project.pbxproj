@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		315693B0ED58D3A14AB16374 /* Pods_AddGuestVisitor_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754E927DE0B1FA77D85B97B2 /* Pods_AddGuestVisitor_UI.framework */; };
+		6C1BF20F242D10C100E06C64 /* EPContactsPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1BF20E242D10C100E06C64 /* EPContactsPicker.framework */; };
 		6C2DD9132416268C005E0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DD9122416268C005E0177 /* AppDelegate.swift */; };
 		6C2DD9152416268C005E0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DD9142416268C005E0177 /* ViewController.swift */; };
 		6C2DD9182416268C005E0177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2DD9162416268C005E0177 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2B49E5BF652E03D79D2B7EE6 /* Pods-AddGuestVisitor_UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddGuestVisitor_UI.release.xcconfig"; path = "Target Support Files/Pods-AddGuestVisitor_UI/Pods-AddGuestVisitor_UI.release.xcconfig"; sourceTree = "<group>"; };
+		6C1BF20E242D10C100E06C64 /* EPContactsPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EPContactsPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2DD90F2416268C005E0177 /* AddGuestVisitor_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddGuestVisitor_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2DD9122416268C005E0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C2DD9142416268C005E0177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1BF20F242D10C100E06C64 /* EPContactsPicker.framework in Frameworks */,
 				315693B0ED58D3A14AB16374 /* Pods_AddGuestVisitor_UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +54,7 @@
 		60AB2B552754E6ECB076BD9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C1BF20E242D10C100E06C64 /* EPContactsPicker.framework */,
 				754E927DE0B1FA77D85B97B2 /* Pods_AddGuestVisitor_UI.framework */,
 			);
 			name = Frameworks;
@@ -137,7 +141,6 @@
 				81633B19D1650B1D2FB66928 /* Pods-AddGuestVisitor_UI.debug.xcconfig */,
 				2B49E5BF652E03D79D2B7EE6 /* Pods-AddGuestVisitor_UI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,7 +155,6 @@
 				6C2DD90B2416268C005E0177 /* Sources */,
 				6C2DD90C2416268C005E0177 /* Frameworks */,
 				6C2DD90D2416268C005E0177 /* Resources */,
-				8FCE0FE5999386CDEF992FE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,23 +232,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8FCE0FE5999386CDEF992FE9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AddGuestVisitor_UI/Pods-AddGuestVisitor_UI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AddGuestVisitor_UI/Pods-AddGuestVisitor_UI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AddGuestVisitor_UI/Pods-AddGuestVisitor_UI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
