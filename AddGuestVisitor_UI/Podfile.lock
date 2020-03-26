@@ -1,0 +1,16 @@
+PODS:
+  - EPContactsPicker (2.0.2)
+
+DEPENDENCIES:
+  - EPContactsPicker
+
+SPEC REPOS:
+  trunk:
+    - EPContactsPicker
+
+SPEC CHECKSUMS:
+  EPContactsPicker: 89b5702dd19564066c390febc8b59b8aa4737748
+
+PODFILE CHECKSUM: 5896f98ee3f5229dd3454d14ee0bbb0df8ad2fdb
+
+COCOAPODS: 1.8.4

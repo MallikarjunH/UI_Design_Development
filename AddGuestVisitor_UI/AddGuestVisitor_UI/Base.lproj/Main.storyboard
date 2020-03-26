@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLZ-7k-g1F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,12 +41,12 @@
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpectedVisitorGuestContactTableViewCell" rowHeight="72" id="LJX-D8-m9F" customClass="ExpectedVisitorGuestContactTableViewCell" customModule="AddGuestVisitor_UI" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="334" height="72"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJX-D8-m9F" id="tSi-je-Oez">
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJX-D8-m9F" id="tSi-je-Oez">
                                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="72"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-Yr-xpR">
-                                                                            <rect key="frame" x="0.0" y="10" width="334" height="53"/>
+                                                                            <rect key="frame" x="0.0" y="10" width="334" height="52"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mallikarjun Hanagandi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFE-BR-rCf">
                                                                                     <rect key="frame" x="15" y="12" width="280" height="21.5"/>
@@ -57,7 +55,7 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_profile" translatesAutoresizingMaskIntoConstraints="NO" id="pE4-KT-YwG">
-                                                                                    <rect key="frame" x="305" y="16.5" width="14" height="14"/>
+                                                                                    <rect key="frame" x="305" y="16" width="14" height="14"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="14" id="Sbt-C0-JBz"/>
                                                                                         <constraint firstAttribute="height" constant="14" id="WLq-FM-9Rj"/>
@@ -409,9 +407,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNf-tA-10x" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13375" y="-2055"/>
+            <point key="canvasLocation" x="14284.057971014494" y="-2055.1339285714284"/>
         </scene>
-        <!--Initial View Controller-->
+        <!--Add Your Guest-->
         <scene sceneID="BuI-A1-5ZY">
             <objects>
                 <viewController id="XZk-l8-ifP" customClass="InitialViewController" customModule="AddGuestVisitor_UI" customModuleProvider="target" sceneMemberID="viewController">
@@ -420,7 +418,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-V6-PZr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddExpectedVisitorTypeCell1" rowHeight="200" id="l3Q-Zt-Vfn" customClass="AddExpectedVisitorTypeCell1" customModule="AddGuestVisitor_UI" customModuleProvider="target">
@@ -472,14 +470,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_contacts" translatesAutoresizingMaskIntoConstraints="NO" id="46L-gR-gh4">
-                                                    <rect key="frame" x="25" y="24" width="26" height="26"/>
+                                                    <rect key="frame" x="25" y="24" width="26" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="GCf-Vy-7nc"/>
                                                         <constraint firstAttribute="width" constant="26" id="vor-ls-OYb"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-Oj-Hvq">
-                                                    <rect key="frame" x="63" y="27" width="133" height="21"/>
+                                                    <rect key="frame" x="63" y="27" width="133" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="L57-C5-h2c"/>
                                                     </constraints>
@@ -488,14 +486,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-Zd-2Ye">
-                                                    <rect key="frame" x="374" y="28.5" width="15" height="18"/>
+                                                    <rect key="frame" x="374" y="29" width="15" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="0I6-km-erb"/>
                                                         <constraint firstAttribute="width" constant="15" id="eLd-6a-y8m"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ucx-Tl-3bX">
-                                                    <rect key="frame" x="25" y="74" width="364" height="0.5"/>
+                                                    <rect key="frame" x="25" y="75" width="364" height="0.5"/>
                                                     <color key="backgroundColor" red="0.43921568630000002" green="0.47058823529999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="Ust-6G-MCY"/>
@@ -530,14 +528,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_manually" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-fc-9wB">
-                                                    <rect key="frame" x="25" y="24" width="26" height="26"/>
+                                                    <rect key="frame" x="25" y="24" width="26" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="324-lU-M3O"/>
                                                         <constraint firstAttribute="width" constant="26" id="Mkc-w9-wnl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Manually" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeG-49-gPk">
-                                                    <rect key="frame" x="63" y="27" width="113" height="21"/>
+                                                    <rect key="frame" x="63" y="27" width="113" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="mmK-Gg-3bg"/>
                                                     </constraints>
@@ -546,14 +544,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Hm0-pi-LR0">
-                                                    <rect key="frame" x="374" y="28.5" width="15" height="18"/>
+                                                    <rect key="frame" x="374" y="29" width="15" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="JLW-Ot-TKS"/>
                                                         <constraint firstAttribute="height" constant="18" id="LYe-rS-khs"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNv-Ng-UCo">
-                                                    <rect key="frame" x="25" y="74" width="364" height="0.5"/>
+                                                    <rect key="frame" x="25" y="75" width="364" height="0.5"/>
                                                     <color key="backgroundColor" red="0.43921568630000002" green="0.47058823529999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="kyf-1T-6hD"/>
@@ -592,13 +590,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZW7-7j-8Dr"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Your Guest" id="ENg-Jw-FrB"/>
                     <connections>
                         <outlet property="mainTableView" destination="Nyn-V6-PZr" id="UzS-cV-Zco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhs-fx-3cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12436" y="-2089"/>
+            <point key="canvasLocation" x="13344.927536231886" y="-2089.2857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cpz-kS-bNN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QLZ-7k-g1F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BpG-wn-biB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XZk-l8-ifP" kind="relationship" relationship="rootViewController" id="Ece-fQ-Fbb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuB-01-2eb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12434.782608695654" y="-2089.2857142857142"/>
         </scene>
     </scenes>
     <resources>

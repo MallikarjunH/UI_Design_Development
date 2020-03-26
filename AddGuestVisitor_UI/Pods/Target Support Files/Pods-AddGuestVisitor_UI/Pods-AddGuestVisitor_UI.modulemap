@@ -1,0 +1,6 @@
+framework module Pods_AddGuestVisitor_UI {
+  umbrella header "Pods-AddGuestVisitor_UI-umbrella.h"
+
+  export *
+  module * { export * }
+}
