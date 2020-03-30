@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		315693B0ED58D3A14AB16374 /* Pods_AddGuestVisitor_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754E927DE0B1FA77D85B97B2 /* Pods_AddGuestVisitor_UI.framework */; };
 		6C1BF20F242D10C100E06C64 /* EPContactsPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1BF20E242D10C100E06C64 /* EPContactsPicker.framework */; };
+		6C2CA1962431FA67000CED9A /* AddGuestManuallyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2CA1952431FA67000CED9A /* AddGuestManuallyTableViewCell.swift */; };
+		6C2CA1982431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2CA1972431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift */; };
 		6C2DD9132416268C005E0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DD9122416268C005E0177 /* AppDelegate.swift */; };
 		6C2DD9152416268C005E0177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DD9142416268C005E0177 /* ViewController.swift */; };
 		6C2DD9182416268C005E0177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2DD9162416268C005E0177 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		2B49E5BF652E03D79D2B7EE6 /* Pods-AddGuestVisitor_UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddGuestVisitor_UI.release.xcconfig"; path = "Target Support Files/Pods-AddGuestVisitor_UI/Pods-AddGuestVisitor_UI.release.xcconfig"; sourceTree = "<group>"; };
 		6C1BF20E242D10C100E06C64 /* EPContactsPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EPContactsPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C2CA1952431FA67000CED9A /* AddGuestManuallyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestManuallyTableViewCell.swift; sourceTree = "<group>"; };
+		6C2CA1972431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpectedGuestManuallyViewController.swift; sourceTree = "<group>"; };
 		6C2DD90F2416268C005E0177 /* AddGuestVisitor_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddGuestVisitor_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2DD9122416268C005E0177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C2DD9142416268C005E0177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			children = (
 				6C911C84242B4642005AC49E /* InitialViewController.swift */,
 				6C2DD9142416268C005E0177 /* ViewController.swift */,
+				6C2CA1972431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				6C2DD92424164146005E0177 /* ExpectedVisitorGuestContactTableViewCell.swift */,
 				6C911C8D242B4838005AC49E /* AddExpectedVisitorTypeCell.swift */,
+				6C2CA1952431FA67000CED9A /* AddGuestManuallyTableViewCell.swift */,
 			);
 			path = TableVIewCells;
 			sourceTree = "<group>";
@@ -245,7 +251,9 @@
 				6C2DD9152416268C005E0177 /* ViewController.swift in Sources */,
 				6C911C8E242B4838005AC49E /* AddExpectedVisitorTypeCell.swift in Sources */,
 				6C2DD9132416268C005E0177 /* AppDelegate.swift in Sources */,
+				6C2CA1982431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift in Sources */,
 				6C911C85242B4642005AC49E /* InitialViewController.swift in Sources */,
+				6C2CA1962431FA67000CED9A /* AddGuestManuallyTableViewCell.swift in Sources */,
 				6C911C87242B476B005AC49E /* VisitorsContactModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

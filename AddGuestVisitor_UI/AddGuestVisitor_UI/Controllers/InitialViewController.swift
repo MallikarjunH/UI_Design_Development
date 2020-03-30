@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EPContactsPicker
+//import EPContactsPicker
 
 class InitialViewController: UIViewController {
     
@@ -88,9 +88,9 @@ extension InitialViewController: UITableViewDataSource, UITableViewDelegate {
         }
         else if indexPath.row == 1{ // Add from contacts
             
-            let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.phoneNumber)
+          /*  let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.phoneNumber)
             let navigationController = UINavigationController(rootViewController: contactPickerScene)
-            self.present(navigationController, animated: true, completion: nil)
+            self.present(navigationController, animated: true, completion: nil) */
             
         }
         else{ //Index 2 - Add manually
@@ -103,7 +103,7 @@ extension InitialViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-extension InitialViewController: EPPickerDelegate {
+/* extension InitialViewController: EPPickerDelegate {
     
     func epContactPicker(_ : EPContactsPicker, didSelectMultipleContacts contacts: [EPContact]) {
         var expectedContacts = [VisitorsContactModel]()
@@ -139,3 +139,4 @@ extension InitialViewController: EPPickerDelegate {
         
     }
 }
+*/
