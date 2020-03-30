@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		315693B0ED58D3A14AB16374 /* Pods_AddGuestVisitor_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754E927DE0B1FA77D85B97B2 /* Pods_AddGuestVisitor_UI.framework */; };
-		6C1BF20F242D10C100E06C64 /* EPContactsPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1BF20E242D10C100E06C64 /* EPContactsPicker.framework */; };
 		6C2CA1962431FA67000CED9A /* AddGuestManuallyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2CA1952431FA67000CED9A /* AddGuestManuallyTableViewCell.swift */; };
 		6C2CA1982431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2CA1972431FF69000CED9A /* AddExpectedGuestManuallyViewController.swift */; };
 		6C2DD9132416268C005E0177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DD9122416268C005E0177 /* AppDelegate.swift */; };
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C1BF20F242D10C100E06C64 /* EPContactsPicker.framework in Frameworks */,
 				315693B0ED58D3A14AB16374 /* Pods_AddGuestVisitor_UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

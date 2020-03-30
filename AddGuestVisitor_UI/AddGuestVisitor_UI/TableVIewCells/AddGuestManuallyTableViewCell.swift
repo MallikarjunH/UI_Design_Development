@@ -46,46 +46,59 @@ class AddExpectedGuestMobileTableViewCell: UITableViewCell,UITextFieldDelegate {
 
 class AddExpectedGuestVehicleNumberTableViewCell: UITableViewCell,UITextFieldDelegate {
 
-    @IBOutlet weak var AdditionalMemberTextField: UITextField!
-    @IBOutlet weak var addImage: UIImageView!
     
+    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet weak var textField2: UITextField!
+    @IBOutlet weak var textField3: UITextField!
+    @IBOutlet weak var textField4: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         self.selectionStyle = .none
-        addImage.layer.cornerRadius = 5
+        
+        addBottomBorderColor(textField: textField1)
+        addBottomBorderColor(textField: textField2)
+        addBottomBorderColor(textField: textField3)
+        addBottomBorderColor(textField: textField4)
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
+    }
+
+    func addBottomBorderColor(textField: UITextField){
+        
+        let layer = CALayer() //c6cad3
+        layer.backgroundColor = UIColor.blue.cgColor
+        layer.frame = CGRect(x: 0, y: textField.frame.size.height - 2.0, width: textField.frame.size.width, height: 1.0)
+        textField.layer.addSublayer(layer)
     }
 
 }
 
 class AddExpectedGuestMemberTableViewCell: UITableViewCell {
 
-     @IBOutlet weak var BGView: UIView!
-     @IBOutlet weak var nameLabel: UILabel!
-     
-     var borderColorForView = UIColor(red:207/255,green:207/255,blue:207/255,alpha:1)
-     
-     override func awakeFromNib() {
-         super.awakeFromNib()
-         // Initialization code
-         self.selectionStyle = .none
-         BGView.layer.cornerRadius = 8
-         BGView.layer.borderWidth = 0.5
-         BGView.clipsToBounds = true
-         BGView.layer.borderColor = borderColorForView.cgColor
-         
-     }
-     override func setSelected(_ selected: Bool, animated: Bool) {
-         super.setSelected(selected, animated: animated)
-         
-         // Configure the view for the selected state
-     }
+    @IBOutlet weak var AdditionalMemberTextField: UITextField!
+    @IBOutlet weak var addImage: UIImageView!
+       
+       
+       override func awakeFromNib() {
+           super.awakeFromNib()
+           // Initialization code
+           self.selectionStyle = .none
+           addImage.layer.cornerRadius = 5
+       }
+
+       override func setSelected(_ selected: Bool, animated: Bool) {
+           super.setSelected(selected, animated: animated)
+
+           // Configure the view for the selected state
+       }
+
 
 }

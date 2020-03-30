@@ -11,7 +11,7 @@
         <!--Guest-->
         <scene sceneID="lBR-LO-OYk">
             <objects>
-                <viewController id="RPp-5z-etk" customClass="ViewController" customModule="AddGuestVisitor_UI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="RPp-5z-etk" customClass="ViewController" customModule="AddGuestVisitor_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J3q-vn-3aO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -617,10 +617,10 @@
             </objects>
             <point key="canvasLocation" x="12434.782608695654" y="-2089.2857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Expected Guest Manually View Controller-->
         <scene sceneID="QSM-Gc-Ojc">
             <objects>
-                <viewController id="QS4-bs-P9Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddExpectedGuestManuallyViewController" id="QS4-bs-P9Y" customClass="AddExpectedGuestManuallyViewController" customModule="AddGuestVisitor_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BdW-zX-tkO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -629,7 +629,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="139" id="70F-yb-rCD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddExpectedGuestNameTableViewCell" rowHeight="139" id="70F-yb-rCD" customClass="AddExpectedGuestNameTableViewCell" customModule="AddGuestVisitor_UI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="70F-yb-rCD" id="Tlb-M4-ubc">
@@ -652,6 +652,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="QS4-bs-P9Y" id="tvt-g0-fwm"/>
+                                                    </connections>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-I9-Z6i">
                                                     <rect key="frame" x="25" y="129.5" width="355" height="0.5"/>
@@ -675,8 +678,11 @@
                                                 <constraint firstItem="F1g-4V-vx4" firstAttribute="leading" secondItem="Tlb-M4-ubc" secondAttribute="leadingMargin" constant="10" id="mqv-As-igo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameTextField" destination="F1g-4V-vx4" id="m0P-ah-Rqt"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="ZbP-kn-cks">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddExpectedGuestMobileTableViewCell" rowHeight="80" id="ZbP-kn-cks" customClass="AddExpectedGuestMobileTableViewCell" customModule="AddGuestVisitor_UI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="167" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZbP-kn-cks" id="EcC-2E-sdX">
@@ -699,6 +705,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="QS4-bs-P9Y" id="rnk-z5-R3z"/>
+                                                    </connections>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2A-xa-7xF">
                                                     <rect key="frame" x="25" y="70.5" width="355" height="0.5"/>
@@ -722,8 +731,11 @@
                                                 <constraint firstItem="lUw-eN-xmZ" firstAttribute="leading" secondItem="EcC-2E-sdX" secondAttribute="leadingMargin" constant="10" id="tvo-Gz-K2R"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mobileNumberTextField" destination="lUw-eN-xmZ" id="DFc-Xc-BTn"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="103" id="G6H-kZ-Nym">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddExpectedGuestVehicleNumberTableViewCell" rowHeight="103" id="G6H-kZ-Nym" customClass="AddExpectedGuestVehicleNumberTableViewCell" customModule="AddGuestVisitor_UI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="247" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G6H-kZ-Nym" id="Inn-Mf-6Rs">
@@ -747,24 +759,36 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="QS4-bs-P9Y" id="vB9-uY-aAm"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwy-Fg-Y1D">
                                                             <rect key="frame" x="269" y="0.0" width="72" height="53"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="QS4-bs-P9Y" id="HU6-4G-NnQ"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-Yn-wvE">
                                                             <rect key="frame" x="181" y="0.0" width="72" height="53"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="QS4-bs-P9Y" id="HNf-aN-9B4"/>
+                                                            </connections>
                                                         </textField>
                                                         <textField opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hO9-GB-T7f">
                                                             <rect key="frame" x="92" y="0.0" width="76" height="53"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="QS4-bs-P9Y" id="u1C-Hc-9gh"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -802,8 +826,14 @@
                                                 <constraint firstItem="Id9-93-f3l" firstAttribute="leading" secondItem="Inn-Mf-6Rs" secondAttribute="leading" constant="25" id="nMR-YJ-Cb7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField1" destination="nWu-nA-YbL" id="bPT-gM-ZkF"/>
+                                            <outlet property="textField2" destination="hO9-GB-T7f" id="jtJ-kl-RyS"/>
+                                            <outlet property="textField3" destination="pa2-Yn-wvE" id="dsi-iE-tOD"/>
+                                            <outlet property="textField4" destination="fwy-Fg-Y1D" id="x9X-RF-sqL"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="200" id="JV8-3V-wp0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddExpectedGuestMemberTableViewCell" rowHeight="200" id="JV8-3V-wp0" customClass="AddExpectedGuestMemberTableViewCell" customModule="AddGuestVisitor_UI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="350" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JV8-3V-wp0" id="kJ0-aA-XBD">
@@ -826,6 +856,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="QS4-bs-P9Y" id="iBw-h4-6ty"/>
+                                                    </connections>
                                                 </textField>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGW-ZV-E2v">
                                                     <rect key="frame" x="25" y="70" width="355" height="0.5"/>
@@ -876,8 +909,16 @@
                                                 <constraint firstItem="OGW-ZV-E2v" firstAttribute="leading" secondItem="kJ0-aA-XBD" secondAttribute="leading" constant="25" id="sOa-SG-tqi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AdditionalMemberTextField" destination="xOM-ul-Z9b" id="rgZ-Hw-iDn"/>
+                                            <outlet property="addImage" destination="EcN-pv-fy9" id="QFw-7W-K2h"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QS4-bs-P9Y" id="p4K-dO-69o"/>
+                                    <outlet property="delegate" destination="QS4-bs-P9Y" id="xiZ-TM-gzO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -889,6 +930,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nSu-1l-POD"/>
                     </view>
+                    <connections>
+                        <outlet property="mainTableView" destination="k5U-UZ-9oe" id="ygZ-IK-01D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtQ-aR-A6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

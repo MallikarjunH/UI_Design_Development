@@ -94,10 +94,12 @@ extension InitialViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
         else{ //Index 2 - Add manually
-            /*  let vc = CommonFunctions.shareInstance.getController(id: "AddExpectedGuestManuallyViewController", .GateKeeper) as! AddExpectedGuestManuallyViewController
-             vc.title = "Add Expected Visitor"
-             self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-             self.navigationController?.pushViewController(vc, animated: true) */
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddExpectedGuestManuallyViewController") as! AddExpectedGuestManuallyViewController
+            vc.title = "Add Guest Manually"
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
