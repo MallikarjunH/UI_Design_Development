@@ -126,7 +126,8 @@ class AddExpectedGuestManuallyViewController: UIViewController,UITextFieldDelega
         print("Mobile: \(visitorMobileNumber)")
         print("Additional Member: \(additionalMemberCount)")
         
-        guard self.vehicleNumber.count > 3 else {
+        //Validation
+     /*   guard self.vehicleNumber.count > 3 else {
              // AaAlertviews.errorColorCustomBottomAlert(msg: "Please Enter A Valid Vehicle Number", selfView: self.view)
             return
         }
@@ -134,7 +135,7 @@ class AddExpectedGuestManuallyViewController: UIViewController,UITextFieldDelega
         guard visitorMobileNumber.count < 15 && visitorMobileNumber.count > 8 else {
            // AaAlertviews.errorColorCustomBottomAlert(msg: "Please Enter A Valid Mobile Number", selfView: self.view)
             return
-        }
+        } */
          
             print("Everything went will")
         
